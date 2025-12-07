@@ -1,0 +1,60 @@
+apis:
+  groq:
+    enabled: true
+    max_tokens: 1000
+    model: llama-3.3-70b-versatile
+  huggingface:
+    enabled: true
+    model: meta-llama/Meta-Llama-3-8B-Instruct
+  openai:
+    enabled: false
+    model: gpt-3.5-turbo
+cloud:
+  preferred_platform: kaggle
+  sync_interval: 3600
+  use_cloud_training: true
+evaluation:
+  benchmark_interval: 100
+  improvement_threshold: 0.02
+  metrics:
+  - perplexity
+  - accuracy
+  - reasoning
+learning:
+  batch_size: 4
+  gradient_accumulation_steps: 4
+  learning_rate: 2e-4
+  lora_alpha: 32
+  lora_dropout: 0.05
+  lora_r: 16
+  max_steps: 100
+  target_modules:
+  - q_proj
+  - v_proj
+  warmup_steps: 10
+memory:
+  collection_name: learned_knowledge
+  embedding_model: sentence-transformers/all-MiniLM-L6-v2
+  max_results: 5
+  vector_db_path: ./data/knowledge/chromadb
+model:
+  base_model: data/models/trained_model
+  device: mps
+  max_length: 512
+  temperature: 0.7
+safety:
+  backup_before_modification: true
+  human_approval_required: false
+  max_code_execution_time: 300
+  rollback_enabled: true
+  sandbox_enabled: true
+self_modification:
+  allowed_modifications:
+  - learning_hyperparameters
+  - training_strategies
+  - data_collection_methods
+  enabled: true
+  forbidden_modifications:
+  - safety_constraints
+  - evaluation_metrics
+  max_iterations_per_cycle: 10

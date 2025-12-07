@@ -1,0 +1,45 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+env/
+*.egg-info/
+dist/
+build/
+
+# Data files
+*.backup
+*.backup_tested
+data/checkpoints/
+data/logs/
+*.log
+training_output.log
+evolution_run.log
+
+# Model files (too large for git)
+models/
+*.pt
+*.pth
+*.bin
+*.safetensors
+
+# Environment
+.env
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Temporary
+*.tmp
+/tmp/
+.env.save

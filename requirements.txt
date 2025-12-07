@@ -1,0 +1,39 @@
+# Core ML Libraries
+torch>=2.0.0
+transformers>=4.35.0
+accelerate>=0.24.0
+peft>=0.6.0
+bitsandbytes>=0.41.0
+
+# Vector Database & Embeddings
+chromadb>=0.4.15
+sentence-transformers>=2.2.2
+
+# API Integrations
+openai>=1.3.0
+anthropic>=0.7.0
+groq>=0.4.0
+requests>=2.31.0
+
+# Data Processing
+datasets>=2.14.0
+numpy>=1.24.0
+pandas>=2.0.0
+
+# Utilities
+python-dotenv>=1.0.0
+pyyaml>=6.0
+tqdm>=4.66.0
+rich>=13.6.0
+
+# Evaluation
+scikit-learn>=1.3.0
+
+# Cloud Integration
+jupyter>=1.0.0
+notebook>=7.0.0
+
+# Safety & Monitoring
+psutil>=5.9.0
+flask
+beautifulsoup4>=4.12.0
